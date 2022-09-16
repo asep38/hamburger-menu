@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #6fcff7;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+}
+
+.hamburger {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.hamburger span {
+  position: absolute;
+  border-radius: 45px;
+  height: 5px;
+  width: 80px;
+  background: #11b4fa;
+  transition: 0.5s;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(-20px);
+  width: 40%;
+}
+
+.hamburger span:nth-child(2) {
+  transform: translateY(20px);
+  width: 40%;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateX(100px);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(0px) rotate(45deg);
+  width: 80px;
+}
+
+.hamburger.active span:nth-child(2) {
+  transform: translateY(0px) rotate(315deg);
+  width: 80px;
+}
